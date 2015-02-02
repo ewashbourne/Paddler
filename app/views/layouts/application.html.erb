@@ -1,14 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Paddler</title>
+  <title>Paddler | One Boat for the Whole World</title>
+  <link href="/styles/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/styles/css/css_bootstrap_overrides.css" rel="stylesheet">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div classs="wrapper">	
+	<nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container-fluid">
+	    <div class="navbar-header">	
+	      <a class="navbar-brand" href="/">Paddler</a>
+	    </div>
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="/items">SHOP</a></li>
+	        <li><a href="/about">ABOUT</a></li>
+	        <li><a href="/">HOME</a></li>
+	      </ul> 
+	    </div>
+	  </div>
+	</nav>
+</div>
 
 <%= yield %>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="/styles/js/bootstrap.min.js"></script>
+
+<footer class="footer">
+	<div class="copyright">
+	<span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span> Copyright 2015 by Ethan Washbourne
+	<div>
+</footer>
 </body>
 </html>

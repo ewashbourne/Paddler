@@ -1,9 +1,9 @@
 class StaticPagesController < ApplicationController
 	def home
-		@active = 'home'
+		# @active = 'home'
 	end
 	
 	def about
-		@active = 'about'
+		# @active = 'about'
 	end
 end

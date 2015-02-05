@@ -1,12 +1,12 @@
 class ItemsController < ApplicationController
 
 	def index
-		@active = 'items'
+		# @active = 'items'
 		@items = Inventory.all 
 	end
 
 	def show
-		@active = 'items'
+		# @active = 'items'
 		@item = Inventory.find(params[:id].to_i)
 	end
 

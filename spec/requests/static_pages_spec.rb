@@ -6,7 +6,7 @@ require 'rails_helper'
 		describe 'home page' do 
 			before { visit root_path }
 
-			it { should have_title('Paddler | One Boat for the Whole World') }
+			it { should have_title('Paddler') }
 			it { should have_selector('h1', text: 'With so many places to paddle, all you need is the right boat.') }
 			it { should have_selector('h4', text: 'RECREATIONAL') }
 			it { should have_selector('h4', text: 'TOURING') }

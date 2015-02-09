@@ -45,5 +45,13 @@ require 'rails_helper'
 			it { should_not be_valid }
 		end
 	end
+
+	describe 'description' do 
+		context 'not present' do 
+		end
+
+		context 'too short' do 
+		end
+	end
 end
 

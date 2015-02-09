@@ -1,0 +1,44 @@
+<% provide(:title, "Shop") %>
+<section class="drop row">
+  <div class="dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+    Where do you want to paddle?
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">River and Lakes</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Coves and Coastlines</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Open Ocean</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">River Rapids</a></li>
+  </ul>
+</div>
+</section>
+
+<section class="items">
+  <div class="list-group">
+    <div class="row">
+      <% @items.each do |item| %>
+        <div class="each-item col-md-4">
+          <a href="items/<%= item.id %>" class="list-group-items">
+            <h3><%= item.name %></h3>
+            <article class="row">
+              <div class="col-xs-5">
+                <img class="middle" width=200px height=140px src="/images/<%= item.image_file %>"/>
+              </div>
+              <div class="col-xs-7">
+                <dl class="dl-horizontal">
+                  <dt>Maker:</dt>
+                  <dd><%= item.brand %></dd>
+                  <dt>Price:</dt>
+                  <dd>$<%= item.price %></dd>
+                  <dt>Length:</dt><dd><%= item.length %>'</dd>
+                </dl>
+              </div>
+            </article>
+          </a>
+        </div>
+      <% end %> 
+    </div>
+  </div>
+</section>
+  
